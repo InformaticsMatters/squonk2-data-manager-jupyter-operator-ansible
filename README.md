@@ -1,6 +1,6 @@
 # Ansible playbooks for the Squonk2 Jupyter Operator
 
-[![lint](https://github.com/informaticsmatters/squonk2-data-manager-jupyter-operator-ansible)/actions/workflows/lint.yaml/badge.svg)](https://github.com/informaticsmatters/squonk2-data-manager-jupyter-operator-ansible)/actions/workflows/lint.yaml)
+[![lint](https://github.com/informaticsmatters/squonk2-data-manager-jupyter-operator-ansible/actions/workflows/lint.yaml/badge.svg)](https://github.com/informaticsmatters/squonk2-data-manager-jupyter-operator-ansible/actions/workflows/lint.yaml)
 
 ![GitHub](https://img.shields.io/github/license/informaticsmatters/squonk2-data-manager-jupyter-operator-ansible)
 
