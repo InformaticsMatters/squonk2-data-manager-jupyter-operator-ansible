@@ -25,8 +25,8 @@
 
 - name: Deploy Data Manager Material
   kubernetes.core.k8s:
-    definition: "{{ lookup('template', '{{ item }}.yaml.j2') }}"
+    definition: "{{ lookup('template', item) }}"
     wait: yes
   loop:
-  - rbac-data-manager
-  - configmap-data-manager
+  - rbac-data-manager.yaml.j2
+  - configmap-data-manager.yaml.j2
