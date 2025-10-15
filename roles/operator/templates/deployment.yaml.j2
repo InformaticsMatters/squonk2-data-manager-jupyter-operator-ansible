@@ -16,6 +16,9 @@ spec:
       labels:
         application: jupyter-operator
     spec:
+{% if jo_priority_class %}
+      priorityClassName: {{ jo_priority_class }}
+{% endif %}
       serviceAccountName: jupyter-operator
 
       # Prefer 'application' nodes before 'core'

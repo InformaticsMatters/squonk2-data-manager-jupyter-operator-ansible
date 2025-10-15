@@ -39,6 +39,8 @@ jo_dmapi_namespace: data-manager-api
 jo_pod_node_selector_key: informaticsmatters.com/purpose-worker
 jo_pod_node_selector_value: 'yes'
 
+# A priority class for the operator Pod
+jo_priority_class: ''
 # Apply Priority Class to Pods launched
 jo_apply_pod_priority_class: no
 
