@@ -1,10 +1,21 @@
 ---
 
-# A ply to deploy objects to the chosen Data Manager namespace.
+# A play to deploy objects to the chosen Data Manager namespace.
 # In this case it's a Role and RoleBinding
 
 - name: Prep
   ansible.builtin.include_tasks: prep.yaml
+  vars:
+    kubeconfig: "{{ jo_kubeconfig }}"
+
+# Include sensitive (Ansible Vault) variables based on the installation name.
+# We include 'sensitive-local.vault' variables if the installation name is 'local'.
+# The user will need to provide the vault password.
+
+- name: Include sensitive (vault) variables ({{ jo_installation_name }})
+  ansible.builtin.include_vars:
+    file: sensitive-{{ jo_installation_name }}.vault
+  when: jo_installation_name | length > 0
 
 # Check the Data Manager Namespace and Service Account exists...
 

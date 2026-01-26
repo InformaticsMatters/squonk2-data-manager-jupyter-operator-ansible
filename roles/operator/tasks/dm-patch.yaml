@@ -9,7 +9,7 @@
 - name: Assert Namespace ({{ jo_dmapi_namespace }})
   ansible.builtin.assert:
     that:
-    - ns_result.resources|length == 1
+    - ns_result.resources | length == 1
 
 - name: Get Data Manager ServiceAccount
   kubernetes.core.k8s_info:
@@ -21,7 +21,7 @@
 - name: Assert ServiceAccount
   ansible.builtin.assert:
     that:
-    - sa_result.resources|length == 1
+    - sa_result.resources | length == 1
 
 - name: Deploy Data Manager Material
   kubernetes.core.k8s:

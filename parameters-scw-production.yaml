@@ -1,0 +1,12 @@
+---
+
+# A parameter file to replicate the variables used by AWX.
+# The user would run this (armed with a suitable Ansible) with: -
+#
+#   export KUBECONFIG=~/k8s-config/kubeconfig-im-main-scw-admin.yaml
+#   ansible-playbook site.yaml -e @parameters-scw-production.yaml \
+#       -e jo_image_tag=35.0.0 \
+#       --vault-password-file ../scw-production-vault.password
+
+jo_installation_name: scw-production
+jo_image_tag: SetMe
