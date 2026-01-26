@@ -10,7 +10,7 @@
   register: ns_result
 
 - name: Remove operator material
-  when: ns_result.resources|length == 1
+  when: ns_result.resources | length == 1
   block:
 
   - name: Remove operator Data Manager API RBAC

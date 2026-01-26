@@ -5,7 +5,7 @@
 jo_state: present
 
 # The kubernetes config file.
-jo_kubeconfig: SetMe
+jo_kubeconfig: ''
 
 # The Operator container image and tag
 jo_image: informaticsmatters/data-manager-jupyter-operator
