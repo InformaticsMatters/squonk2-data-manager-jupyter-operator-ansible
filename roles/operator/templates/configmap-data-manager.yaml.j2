@@ -33,3 +33,45 @@ data:
     period = {{ jo_cost_period }}
     unit = PxGi
     pro rata = yes
+  dm-app.template: |
+    {
+      "title": "The JupyterOperator Template",
+      "description": "User-definable application variables for the Jupyter notebook operator.",
+      "type": "object",
+      "required": ["image"],
+      "properties": {
+        "image": {
+          "title": "Container image",
+          "description": "The image name to use for the notebook.",
+          "type": "string"
+        },
+        "memory": {
+          "title": "Memory request",
+          "description": "The container memory request.",
+          "type": "string",
+          "enum": ["1Gi", "2Gi", "3Gi", "4Gi", "6Gi", "8Gi"],
+          "default": "1Gi"
+        },
+        "cpu": {
+          "title": "CPU request",
+          "description": "The container CPU request, an integer, in units of whole CPU",
+          "type": "string",
+          "enum": ["1", "2"],
+          "default": "1"
+        }
+      }
+    }
+  dm-app.template.mapping: |
+    {
+      "image": [
+        "image"
+      ],
+      "cpu": [
+        "resources.limits.cpu",
+        "resources.requests.cpu"
+      ],
+      "memory": [
+        "resources.limits.memory",
+        "resources.requests.memory"
+      ]
+    }
