@@ -6,6 +6,7 @@
 #
 # - IM_DEV_JUPO_IMAGE_TAG
 
+jo_installation_name: local
 jo_kubeconfig: "{{ lookup('env', 'KUBECONFIG') }}"
 
 jo_namespace: im-data-manager-jupyter-operator
